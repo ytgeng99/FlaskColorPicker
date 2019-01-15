@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb({{ session['red'] }}, {{ session['green'] }}, {{ session['blue'] }});
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Entre your color values below:</h1>
+        <form action='/pickcolor' method='post'>
+            <p>Red: <input type="text" name="red"></p>
+            <p>Green: <input type="text" name="green"></p>
+            <p>Blue: <input type="text" name="blue"></p>
+            <p>* All values must be between 1 and 255</p>
+            <input type="submit" value="Show my color!">
+        </form>
+    </body>
+</html>
